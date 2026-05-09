@@ -14,5 +14,8 @@ public class Main{
 
         JButton button = new JButton("Log Weight");
         frame.add(button);
+
+        JTextField weightInput = new JTextField(10);
+        frame.add(weightInput);
     }
 }
