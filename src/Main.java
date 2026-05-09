@@ -12,10 +12,17 @@ public class Main{
         JLabel label = new JLabel("Welcome to Fitness Tracker");
         frame.add(label, BorderLayout.NORTH);
 
+        JTextField weightInput = new JTextField(10);
+        frame.add(weightInput, BorderLayout.CENTER);
+
         JButton button = new JButton("Log Weight");
         frame.add(button, BorderLayout.SOUTH);
 
-        JTextField weightInput = new JTextField(10);
-        frame.add(weightInput, BorderLayout.CENTER);
+        button.addActionListener(e ->{
+            String weight = weightInput.getText();
+            JOptionPane.showMessageDialog(frame, "Weight Logged: " + weight + "kg");
+        });
+
+
     }
 }
