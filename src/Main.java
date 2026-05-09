@@ -18,6 +18,13 @@ public class Main{
         JButton button = new JButton("Log Weight");
         frame.add(button, BorderLayout.SOUTH);
 
+        String[] columns = {"Date", "Weight (kg)"};
+        Object[][] data = {};
+
+        JTable table = new JTable(data, columns);
+        JScrollPane scrollPane = new JScrollPane(table);
+        frame.add(scrollPane, BorderLayout.CENTER);
+
         button.addActionListener(e ->{
             String weight = weightInput.getText();
             JOptionPane.showMessageDialog(frame, "Weight Logged: " + weight + "kg");
